@@ -4,7 +4,7 @@ import "normalize.css";
 import './index.css';
 import Nav from './pages/Main/index'
 import Servicos from 'pages/Main/Conteudo_Um';
-import Button from 'pages/Main/Cotacao/Wpp';
+import Cotacao from 'pages/Main/Cotacao/Conteudo_Dois';
 
 
 
@@ -15,10 +15,7 @@ root.render(
   <React.StrictMode>
       <Nav />
       <Servicos />
-
-      
-
-      <Button />
+      <Cotacao />
   </React.StrictMode>
 );
 

@@ -4,7 +4,9 @@
 @import "styles/animation";
 
 
-.teste {
+.principal {
+    animation: fadeIn 2s ease-in-out;
+
     padding: 2%;
     background-color: $secundaria;
 }
