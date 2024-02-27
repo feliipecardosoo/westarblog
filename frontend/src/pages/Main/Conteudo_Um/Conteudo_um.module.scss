@@ -1,22 +1,33 @@
 @import "styles/variaveis";
 @import "styles/breakpoints";
 @import "styles/colors";
+@import "styles/animation";
 
+
+.teste {
+    padding: 2%;
+    background-color: $secundaria;
+}
 
 .conteudoMain {
+    animation: fadeIn 3s ease-in-out; /* Nome da animação, duração, modo de interpolação */
+
     @media (max-width: $mobile) {
+        
         border: 1px solid $primaria;
         border-radius: 5px;
-        width: 53%;
-        margin: 0.9%;
+        margin: 5%;
+        width: 90%;
         background-color: $secundaria;
     }
 }
 
 .conteudoMain__h4 {
     @media (max-width: $mobile) {
+        margin-top: 3%;
         text-align: center;
         color: $primaria;
+        font-weight: 700;
     }
 }
 

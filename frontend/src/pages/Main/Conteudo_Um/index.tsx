@@ -3,6 +3,7 @@ import imagemUm from './assets/businessman-2108029_640 copy.jpg'
 
 export default function Servicos() {
     return (
+        <div className={style.teste}>
         <div className={style.conteudoMain}>
             <h4 className={style.conteudoMain__h4}>Alguns Serviços Disponiveis:</h4>
 
@@ -29,6 +30,7 @@ export default function Servicos() {
                 </div>
                 <img src={imagemUm} alt="Imagem Logistica" className={style.main__servicos__img}/>
             </div>
+        </div>
         </div>
     )
 }
