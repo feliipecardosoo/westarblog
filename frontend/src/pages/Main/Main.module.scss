@@ -2,7 +2,47 @@
 @import "styles/breakpoints";
 
 
-.teste {
-    background-color: black;
-    color: wheat;
+.bgNav {
+    @media (max-width: $mobile) {
+        width: 100%;
+        background-color: #DCF2F1;
+        padding: 5%;
+      }
+      @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
+      }
+      @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
+      }
+}
+
+.bgPrincipal {
+    @media (max-width: $mobile) {
+        padding: 10px;
+        background-color: #365486;
+        color: #ffffff;
+    }
+}
+
+.titulo {
+    @media (max-width: $mobile) {
+        padding: 5% 0%;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        gap: 2px;
+        text-align: center;
+    }
+}
+
+.titulo__h1 {
+    @media (max-width: $mobile) {
+        font-size: 1rem;
+        font-weight: 700;
+        font-style: normal;
+    }
+}
+
+.titulo__p {
+    @media (max-width: $mobile) {
+        font-size: 0.7rem;
+    }
 }
