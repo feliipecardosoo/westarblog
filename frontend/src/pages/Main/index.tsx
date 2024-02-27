@@ -1,10 +1,11 @@
 import style from './Main.module.scss'
+import logo from './assets/logo.png'
 
 export default function Main() {
     return(
         <main>
             <div className={style.bgNav}>
-                
+                <img src={logo} alt="Logo WestarbLog" className={style.logo}/>
             </div>
             <div className={style.bgPrincipal}>
                 <nav className={style.titulo}>

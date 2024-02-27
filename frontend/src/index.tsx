@@ -4,6 +4,7 @@ import "normalize.css";
 import './index.css';
 import Nav from './pages/Main/index'
 import Servicos from 'pages/Main/Conteudo_Um';
+import Cotacao from 'pages/Main/Cotacao';
 
 
 
@@ -12,8 +13,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-      <Nav/>
-      <Servicos/>
+      <Nav />
+      <Servicos />
+      <Cotacao />
   </React.StrictMode>
 );
 

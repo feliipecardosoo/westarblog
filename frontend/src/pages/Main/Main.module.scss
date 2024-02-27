@@ -4,21 +4,27 @@
 
 
 .bgNav {
+
+    display: flex;
+    justify-content: left;
+    gap: 2%;
+
     @media (max-width: $mobile) {
-        width: 100%;
-        background-color: $primaria;
-        padding: 5%;
-      }
-      @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
-      }
-      @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
-      }
-}
+      width: 100%;
+      background-color: $primaria;
+      padding: 5%;
+    }
+  }
+  
+  .logo {
+    width: 15%; 
+    
+  }
+  
 
 .bgPrincipal {
     @media (max-width: $mobile) {
         padding: 10px;
-        background-color: $secundaria;
         color: $primaria;
     }
 }
