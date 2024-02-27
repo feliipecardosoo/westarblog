@@ -1,0 +1,55 @@
+@import "styles/variaveis";
+@import "styles/breakpoints";
+@import "styles/colors";
+
+
+.conteudoMain {
+    @media (max-width: $mobile) {
+        border: 1px solid $primaria;
+        border-radius: 5px;
+        width: 53%;
+        margin: 0.9%;
+    }
+}
+
+.conteudoMain__h4 {
+    @media (max-width: $mobile) {
+        text-align: center;
+        color: $primaria;
+    }
+}
+
+.main__servicos {
+    @media (max-width: $mobile) {
+        display: flex;
+        padding: 4%;
+    }
+}
+
+.main__servicos__img {
+    @media (max-width: $mobile) {
+        width: 50%;
+    }
+}
+
+.servicos {
+    @media (max-width: $mobile) {
+        padding: 3%;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        color: $primaria;
+    }
+}
+
+.servicos__h5 {
+    @media (max-width: $mobile) {
+        font-size: 0.8rem;
+    }
+}
+
+.servicos__p {
+    @media (max-width: $mobile) {
+        font-size: 0.6rem;
+    }
+}

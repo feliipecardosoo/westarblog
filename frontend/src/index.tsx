@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import "normalize.css";
 import './index.css';
 import Nav from './pages/Main/index'
+import Servicos from 'pages/Main/Conteudo_Um';
 
 
 
@@ -12,6 +13,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
       <Nav/>
+      <Servicos/>
   </React.StrictMode>
 );
 

@@ -1,11 +1,12 @@
 @import "styles/variaveis";
 @import "styles/breakpoints";
+@import "styles/colors";
 
 
 .bgNav {
     @media (max-width: $mobile) {
         width: 100%;
-        background-color: #DCF2F1;
+        background-color: $primaria;
         padding: 5%;
       }
       @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
@@ -17,8 +18,8 @@
 .bgPrincipal {
     @media (max-width: $mobile) {
         padding: 10px;
-        background-color: #365486;
-        color: #ffffff;
+        background-color: $secundaria;
+        color: $primaria;
     }
 }
 
