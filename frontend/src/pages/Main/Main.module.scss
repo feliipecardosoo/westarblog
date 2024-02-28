@@ -9,7 +9,8 @@
     display: flex;
     justify-content: left;
     gap: 2%;
-    animation: fadeIn 2s ease-in-out;
+    animation: fadeIn 2s ease-in-out forwards;
+
     @media (max-width: $mobile) {
       width: 100%;
       background-color: $primaria;
@@ -20,7 +21,7 @@
   .logo {
     width: 25%; 
     
-  }
+}
   
 
 .bgPrincipal {

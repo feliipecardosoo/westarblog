@@ -6,6 +6,7 @@ import Nav from './pages/Main/index'
 import Servicos from 'pages/Main/Conteudo_Um';
 import Cotacao from 'pages/Main/Cotacao/Conteudo_Dois';
 import Localizacao from 'pages/Main/Localizacao';
+import MyComponent from 'pages/Main/Rastreio';
 
 
 
@@ -18,6 +19,7 @@ root.render(
       <Servicos />
       <Cotacao />
       <Localizacao />
+      <MyComponent />
   </React.StrictMode>
 );
 

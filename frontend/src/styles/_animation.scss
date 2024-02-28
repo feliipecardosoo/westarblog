@@ -1,3 +1,5 @@
+@import "styles/variaveis";
+
 @keyframes fadeIn {
     from {
       opacity: 0;
@@ -7,3 +9,12 @@
     }
   }
   
+
+  @keyframes mudarCor {
+    0% {
+        background-color: $quartenaria; 
+    }
+    100% {
+        background-color: $primaria; 
+    }
+}
