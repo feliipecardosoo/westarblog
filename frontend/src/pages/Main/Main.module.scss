@@ -14,19 +14,28 @@
     @media (max-width: $mobile) {
       width: 100%;
       background-color: $primaria;
-      padding: 5%;
+      padding: 3%;
     }
   }
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 2%;
+}
+
+.bgNav__p {
+    font-size: 1.4rem;
+    color: #FFFFFF;
+}
   
-  .logo {
-    width: 25%; 
-    
+.logo {
+    width: 40%; 
 }
   
 
 .bgPrincipal {
     animation: fadeIn 3s ease-in-out; /* Nome da animação, duração, modo de interpolação */
-    background-color: $secundaria;
     @media (max-width: $mobile) {
         padding: 10px;
         color: $primaria;
@@ -36,7 +45,7 @@
 .titulo {
     
     @media (max-width: $mobile) {
-        padding: 5% 0%;
+        padding: 5% 0% 0% 0%;
         display: flex;
         flex-direction: column;
         width: 100%;

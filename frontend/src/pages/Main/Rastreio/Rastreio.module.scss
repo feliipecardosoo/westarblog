@@ -29,6 +29,10 @@
     width: 100%;
 }
 
+.container__input::placeholder {
+    padding: 4%;
+}
+
 .container__button {
     background-color: $primaria;
     color: $secundaria;
@@ -46,8 +50,26 @@
     transition: 1s;
 }
 
+
+.result {
+    display: flex;
+    text-align: center;
+}
+
 .container__resposta {
-    margin-top: 10px; /* Adicionei uma margem superior para separar a resposta do botão */
-    font-size: 1.2rem; /* Ajustei o tamanho da fonte para 1.2rem */
-    color: $primaria; /* Defini a cor do texto */
+    margin-top: 10px; 
+    font-size: 1.2rem; 
+    color: $primaria; 
+    width: 100%;   
+    text-align: center;
+}
+
+.status {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.lower {
+    font-size: 1.2rem;
+    font-weight: 400;
 }

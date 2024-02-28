@@ -5,7 +5,12 @@ export default function Main() {
     return(
         <main>
             <div className={style.bgNav}>
-                <img src={logo} alt="Logo WestarbLog" className={style.logo}/>
+                <div className={style.nav}>
+                    <img src={logo} alt="Logo WestarbLog" className={style.logo}/>
+                    <p className={style.bgNav__p}>
+                        Forte em Logistica
+                    </p>
+                </div>
             </div>
             <div className={style.bgPrincipal}>
                 <nav className={style.titulo}>
