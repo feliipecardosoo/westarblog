@@ -5,6 +5,7 @@ import './index.css';
 import Nav from './pages/Main/index'
 import Servicos from 'pages/Main/Conteudo_Um';
 import Cotacao from 'pages/Main/Cotacao/Conteudo_Dois';
+import Localizacao from 'pages/Main/Localizacao';
 
 
 
@@ -16,6 +17,7 @@ root.render(
       <Nav />
       <Servicos />
       <Cotacao />
+      <Localizacao />
   </React.StrictMode>
 );
 

@@ -8,7 +8,7 @@
     animation: fadeIn 2s ease-in-out;
 
     padding: 2%;
-    background-color: $secundaria;
+    background-color: #FFFFFF;
 }
 
 .conteudoMain {
@@ -21,6 +21,7 @@
         margin: 5%;
         width: 90%;
         background-color: $secundaria;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); 
     }
 }
 

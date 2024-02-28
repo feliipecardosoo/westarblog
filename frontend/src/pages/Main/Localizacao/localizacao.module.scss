@@ -1,0 +1,34 @@
+@import "styles/variaveis";
+@import "styles/breakpoints";
+@import "styles/colors";
+@import "styles/animation";
+
+.container {
+    animation: fadeIn 2s ease-in-out;
+    display: flex;
+    flex-direction: column; /* Organizar os itens em coluna */
+    width: 100%;
+    background-color: $secundaria;
+}
+
+.container__content {
+    width: 100%;
+    padding: 3%;
+}
+
+.container__maps {
+    width: 100%;
+}
+
+.container__content__p {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+    color: $primaria;
+}
+
+.endereco {
+    margin: 0 5% 5% 0;
+    font-size: 1.2rem;
+    color: $primaria;
+}

@@ -25,6 +25,7 @@
 
 .bgPrincipal {
     animation: fadeIn 3s ease-in-out; /* Nome da animação, duração, modo de interpolação */
+    background-color: $secundaria;
     @media (max-width: $mobile) {
         padding: 10px;
         color: $primaria;
