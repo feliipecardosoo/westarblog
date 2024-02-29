@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import style from './Main.module.scss';
 import logo from './assets/logo.png';
 
@@ -6,14 +6,27 @@ export default function Main() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [lastClickedSection, setLastClickedSection] = useState("");
     const [navHeight, setNavHeight] = useState(0);
+    const navRef = useRef<HTMLDivElement>(null); // Definindo o tipo de ref
 
     useEffect(() => {
         const navElement = document.querySelector(`.${style.bgNav}`);
-        if (navElement instanceof HTMLElement) { // Verifica se navElement é uma instância de HTMLElement
+        if (navElement instanceof HTMLElement) {
             const navHeight = navElement.offsetHeight;
             setNavHeight(navHeight);
         }
+
+        document.body.addEventListener('click', handleBodyClick);
+
+        return () => {
+            document.body.removeEventListener('click', handleBodyClick);
+        };
     }, []);
+
+    const handleBodyClick = (event: MouseEvent) => {
+        if (navRef.current && !navRef.current.contains(event.target as Node)) { // Tipo de guarda para navRef.current
+            setMenuOpen(false);
+        }
+    };
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -23,7 +36,7 @@ export default function Main() {
         const targetElement = document.getElementById(targetId);
     
         if (targetElement) {
-            const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight; // Ajuste do topo da navegação
+            const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
             window.scrollTo({
                 top: offsetTop,
                 behavior: 'smooth'
@@ -33,23 +46,19 @@ export default function Main() {
                 setMenuOpen(false);
             }
 
-            // Verifica se o usuário clicou novamente na mesma sessão
             if (targetId === lastClickedSection) {
-                // Se sim, mantém o menu aberto
                 setMenuOpen(true);
             } else {
-                // Se não, fecha o menu
                 setMenuOpen(false);
             }
 
-            // Atualiza a última sessão clicada
             setLastClickedSection(targetId);
         }
     };
 
     return (
         <main>
-            <div className={style.bgNav}>
+            <div className={style.bgNav} ref={navRef}>
                 <div className={style.nav}>
                     <div className={style.menuIcon} onClick={toggleMenu}>
                         <div className={`${style.menuLine} ${menuOpen ? style.open : ''}`}></div>
