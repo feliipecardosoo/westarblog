@@ -29,6 +29,10 @@ export default function Main() {
                 behavior: 'smooth'
             });
 
+            if (targetId === 'nav') {
+                setMenuOpen(false);
+            }
+
             // Verifica se o usuário clicou novamente na mesma sessão
             if (targetId === lastClickedSection) {
                 // Se sim, mantém o menu aberto
@@ -52,7 +56,9 @@ export default function Main() {
                         <div className={`${style.menuLine} ${menuOpen ? style.open : ''}`}></div>
                         <div className={`${style.menuLine} ${menuOpen ? style.open : ''}`}></div>
                     </div>
-                    <img src={logo} alt="Logo WestarbLog" className={style.logo} />
+                    <a onClick={() => handleSmoothScroll("nav")} className={style.link__Imagem}>
+                        <img src={logo} alt="Logo WestarbLog"  className={style.logo}/>
+                    </a>
                 </div>
                 {menuOpen && (
                     <nav className={`${style.menu} ${menuOpen ? style.open : ''}`}>
@@ -65,7 +71,7 @@ export default function Main() {
                     </nav>
                 )}
             </div>
-            <div className={style.bgPrincipal}>
+            <div className={style.bgPrincipal}  id='nav'>
                 <nav className={style.titulo}>
                     <h1 className={style.titulo__h1}>Seja bem vindo à Westarblog!</h1>
                     <p className={style.titulo__p}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero illo, est porro distinctio quaerat quas quisquam reiciendis.</p>

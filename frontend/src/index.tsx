@@ -18,8 +18,8 @@ root.render(
       <Nav />
       <Servicos />
       <Cotacao />
-      <Localizacao />
       <Rastreio />
+      <Localizacao />
   </React.StrictMode>
 );
 

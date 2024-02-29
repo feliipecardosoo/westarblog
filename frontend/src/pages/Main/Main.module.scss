@@ -99,10 +99,6 @@
   color: #ffffff;
 }
 
-.logo {
-  width: 40%;
-}
-
 .bgPrincipal {
   animation: fadeIn 3s ease-in-out;
   margin-top: 80px;
@@ -135,5 +131,16 @@
 .titulo__p {
   @media (max-width: $mobile) {
     font-size: 0.9rem;
+  }
+}
+
+
+.logo {
+  width: 40%;
+  margin-left: 55%;
+}
+
+.link__Imagem {
+  @media (max-width: $mobile) {
   }
 }
