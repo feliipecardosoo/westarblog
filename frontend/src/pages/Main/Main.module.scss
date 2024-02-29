@@ -1,70 +1,129 @@
+// Main.module.scss
+
 @import "styles/variaveis";
 @import "styles/breakpoints";
 @import "styles/colors";
 @import "styles/animation";
 
-
 .bgNav {
+  display: flex;
+  justify-content: left;
+  gap: 2%;
+  animation: fadeIn 1s ease-in-out forwards;
 
-    display: flex;
-    justify-content: left;
-    gap: 2%;
-    animation: fadeIn 2s ease-in-out forwards;
-
-    @media (max-width: $mobile) {
-      width: 100%;
-      background-color: $primaria;
-      padding: 3%;
-    }
+  @media (max-width: $mobile) {
+    width: 100%;
+    background-color: $primaria;
+    padding: 3%;
   }
 
-.nav {
+  .nav {
     display: flex;
     justify-content: space-between;
     margin: 2%;
+
+    .menuIcon {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 24px;
+      width: 30px;
+      z-index: 1000;
+
+      .menuLine {
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        transition: all 0.3s ease;
+      }
+
+      &.open .menuLine:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+      }
+
+      &.open .menuLine:nth-child(2) {
+        opacity: 0;
+      }
+
+      &.open .menuLine:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+      }
+    }
+  }
+
+  .menu {
+    position: absolute;
+    top: 62px;
+    background-color: $primaria;
+    border: 2px solid #555;
+    width: 50%;
+    z-index: 999;
+
+    &.open {
+      transform: translateY(0);
+    }
+
+    .menuList {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        padding: 10px;
+        border-bottom: 1px solid #555;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+
+          &:hover {
+            color: #ddd;
+          }
+        }
+      }
+    }
+  }
 }
 
 .bgNav__p {
-    font-size: 1.4rem;
-    color: #FFFFFF;
+  font-size: 1.4rem;
+  color: #FFFFFF;
 }
-  
+
 .logo {
-    width: 40%; 
+  width: 40%;
 }
-  
 
 .bgPrincipal {
-    animation: fadeIn 3s ease-in-out; /* Nome da animação, duração, modo de interpolação */
-    @media (max-width: $mobile) {
-        padding: 10px;
-        color: $primaria;
-    }
+  animation: fadeIn 3s ease-in-out;
+
+  @media (max-width: $mobile) {
+    padding: 10px;
+    color: $primaria;
+  }
 }
 
 .titulo {
-    
-    @media (max-width: $mobile) {
-        padding: 5% 0% 0% 0%;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        gap: 2px;
-        text-align: center;
-    }
+  @media (max-width: $mobile) {
+    padding: 5% 0% 0% 0%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2px;
+    text-align: center;
+  }
 }
 
 .titulo__h1 {
-    @media (max-width: $mobile) {
-        font-size: 1.7rem;
-        font-weight: 700;
-        font-style: normal;
-    }
+  @media (max-width: $mobile) {
+    font-size: 1.7rem;
+    font-weight: 700;
+    font-style: normal;
+  }
 }
 
 .titulo__p {
-    @media (max-width: $mobile) {
-        font-size: 0.9rem;
-    }
+  @media (max-width: $mobile) {
+    font-size: 0.9rem;
+  }
 }
-
