@@ -3,7 +3,7 @@ import imagemUm from './assets/businessman-2108029_640 copy.jpg'
 
 export default function Servicos() {
     return (
-        <div className={style.principal}>
+        <div className={style.principal} id='servicos'>
             <div className={style.conteudoMain}>
                 <h4 className={style.conteudoMain__h4}>Alguns Serviços Disponiveis:</h4>
 

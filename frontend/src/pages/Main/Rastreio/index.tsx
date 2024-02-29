@@ -34,7 +34,7 @@ export default function Rastreio() {
     };
 
     return (
-        <div className={style.container}>
+        <div id="rastreio" className={style.container}>
             <h1 className={style.container__h1}> Rastreie sua Mercadoria! </h1>
             <input type="text" placeholder='Digite a Chave de Acesso da CTE' value={inputValue} onChange={handleInputChange} className={style.container__input} />
             <button onClick={handleButtonClick} className={style.container__button}>

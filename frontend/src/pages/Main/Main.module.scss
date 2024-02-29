@@ -6,15 +6,20 @@
 @import "styles/animation";
 
 .bgNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: left;
   gap: 2%;
+  z-index: 1000; /* Para garantir que fique acima de outros elementos */
+
 
   @media (max-width: $mobile) {
     width: 100%;
     background-color: $primaria;
     animation: mudarCor 1s ;
-
     padding: 3%;
   }
 
@@ -99,6 +104,7 @@
 
 .bgPrincipal {
   animation: fadeIn 3s ease-in-out;
+  margin-top: 60px;
 
   @media (max-width: $mobile) {
     padding: 10px;

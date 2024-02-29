@@ -3,7 +3,7 @@ import logo from './assets/wpp.png'
 
 export default function Cotacao() {
     return (
-        <div className={style.container}>
+        <div id="cotacao" className={style.container}>
             <div className={style.container__escrita}>
                 <h1 className={style.h1}>Venha fazer uma Cotaçao conosco!</h1>
                 <p className={style.p}>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>

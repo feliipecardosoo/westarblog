@@ -9,6 +9,18 @@ export default function Main() {
         setMenuOpen(!menuOpen);
     };
 
+    const handleSmoothScroll = (targetId: any) => {
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth'
+            });
+            setMenuOpen(false); // Fechar o menu após clicar em um link
+        }
+    };
+
     return (
         <main>
             <div className={style.bgNav}>
@@ -23,10 +35,10 @@ export default function Main() {
                 {menuOpen && (
                     <nav className={`${style.menu} ${menuOpen ? style.open : ''}`}>
                         <ul className={style.menuList}>
-                            <li><a href="#cotacao" onClick={toggleMenu}>Cotação</a></li>
-                            <li><a href="#rastrear" onClick={toggleMenu}>Rastrear Mercadoria</a></li>
-                            <li><a href="#localizacao" onClick={toggleMenu}>Localização</a></li>
-                            <li><a href="#servicos" onClick={toggleMenu}>Serviços</a></li>
+                            <li><a href="#" onClick={() => handleSmoothScroll("cotacao")}>Cotação</a></li>
+                            <li><a href="#" onClick={() => handleSmoothScroll("rastreio")}>Rastrear Mercadoria</a></li>
+                            <li><a href="#" onClick={() => handleSmoothScroll("localizacao")}>Localização</a></li>
+                            <li><a href="#" onClick={() => handleSmoothScroll("servicos")}>Serviços</a></li>
                         </ul>
                     </nav>
                 )}
@@ -40,4 +52,3 @@ export default function Main() {
         </main>
     );
 }
-

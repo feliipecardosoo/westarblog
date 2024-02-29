@@ -2,7 +2,7 @@ import style from './localizacao.module.scss'
 
 export default function Localizacao() {
     return (
-        <div className={style.container}>
+        <div id="localizacao" className={style.container}>
             <div className={style.container__content}>
                 <p className={style.container__content__p}>Nossa Localizacao:</p>
             </div>
