@@ -1,23 +1,45 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import style from './Main.module.scss';
 import logo from './assets/logo.png';
 
 export default function Main() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [lastClickedSection, setLastClickedSection] = useState("");
+    const [navHeight, setNavHeight] = useState(0);
+
+    useEffect(() => {
+        const navElement = document.querySelector(`.${style.bgNav}`);
+        if (navElement instanceof HTMLElement) { // Verifica se navElement é uma instância de HTMLElement
+            const navHeight = navElement.offsetHeight;
+            setNavHeight(navHeight);
+        }
+    }, []);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
 
-    const handleSmoothScroll = (targetId: any) => {
+    const handleSmoothScroll = (targetId: string) => {
         const targetElement = document.getElementById(targetId);
-
+    
         if (targetElement) {
+            const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight; // Ajuste do topo da navegação
             window.scrollTo({
-                top: targetElement.offsetTop,
+                top: offsetTop,
                 behavior: 'smooth'
             });
-            setMenuOpen(false); // Fechar o menu após clicar em um link
+
+            // Verifica se o usuário clicou novamente na mesma sessão
+            if (targetId === lastClickedSection) {
+                // Se sim, mantém o menu aberto
+                setMenuOpen(true);
+            } else {
+                // Se não, fecha o menu
+                setMenuOpen(false);
+            }
+
+            // Atualiza a última sessão clicada
+            setLastClickedSection(targetId);
         }
     };
 
@@ -35,10 +57,10 @@ export default function Main() {
                 {menuOpen && (
                     <nav className={`${style.menu} ${menuOpen ? style.open : ''}`}>
                         <ul className={style.menuList}>
-                            <li><a href="#" onClick={() => handleSmoothScroll("cotacao")}>Cotação</a></li>
-                            <li><a href="#" onClick={() => handleSmoothScroll("rastreio")}>Rastrear Mercadoria</a></li>
-                            <li><a href="#" onClick={() => handleSmoothScroll("localizacao")}>Localização</a></li>
-                            <li><a href="#" onClick={() => handleSmoothScroll("servicos")}>Serviços</a></li>
+                            <li><button onClick={() => handleSmoothScroll("servicos")}>Serviços</button></li>
+                            <li><button onClick={() => handleSmoothScroll("cotacao")}>Cotação</button></li>
+                            <li><button onClick={() => handleSmoothScroll("localizacao")}>Localização</button></li>
+                            <li><button onClick={() => handleSmoothScroll("rastreio")}>Rastrear Mercadoria</button></li>
                         </ul>
                     </nav>
                 )}

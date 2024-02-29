@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/westarblog/static/css/main.1f2e8462.css",
+    "main.css": "/westarblog/static/css/main.a14b7660.css",
     "main.js": "/westarblog/static/js/main.1414f35e.js",
     "static/media/wpp.png": "/westarblog/static/media/wpp.7fb2a49de1bd17643268.png",
     "static/media/businessman-2108029_640 copy.jpg": "/westarblog/static/media/businessman-2108029_640 copy.f0aeadd60d0f722d2bf3.jpg",
     "static/media/logo.png": "/westarblog/static/media/logo.83de2781028fd9e15a40.png",
     "index.html": "/westarblog/index.html",
-    "main.1f2e8462.css.map": "/westarblog/static/css/main.1f2e8462.css.map",
+    "main.a14b7660.css.map": "/westarblog/static/css/main.a14b7660.css.map",
     "main.1414f35e.js.map": "/westarblog/static/js/main.1414f35e.js.map"
   },
   "entrypoints": [
-    "static/css/main.1f2e8462.css",
+    "static/css/main.a14b7660.css",
     "static/js/main.1414f35e.js"
   ]
 }
