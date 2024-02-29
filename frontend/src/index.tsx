@@ -7,6 +7,7 @@ import Rastreio from 'pages/Main/Rastreio';
 import Nav from './pages/Main/index'
 import Servicos from 'pages/Main/Conteudo_Um';
 import Cotacao from 'pages/Main/Cotacao/Conteudo_Dois';
+import Footer from 'pages/Main/Footer';
 
 
 
@@ -20,6 +21,7 @@ root.render(
       <Cotacao />
       <Rastreio />
       <Localizacao />
+      <Footer />
   </React.StrictMode>
 );
 

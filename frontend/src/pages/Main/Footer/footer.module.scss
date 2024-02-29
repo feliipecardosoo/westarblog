@@ -1,0 +1,39 @@
+@import "styles/variaveis";
+@import "styles/breakpoints";
+@import "styles/colors";
+@import "styles/animation";
+
+.container__main {
+    color: $primaria;
+
+    display: flex;
+    
+}
+
+.escritas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    padding: 4%;
+
+    gap: 4px;
+}
+
+.escritas__2 {
+    padding: 4%;
+}
+
+.escritas__h1 {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.escritas__p__2 {
+    font-size: 1rem;
+}
+
+.escritas__p__2__principal {
+    font-weight: bold;
+}
