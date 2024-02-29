@@ -9,15 +9,18 @@
   display: flex;
   justify-content: left;
   gap: 2%;
-  animation: fadeIn 1s ease-in-out forwards;
 
   @media (max-width: $mobile) {
     width: 100%;
     background-color: $primaria;
+    animation: mudarCor 1s ;
+
     padding: 3%;
   }
 
   .nav {
+    animation: fadeIn 1s ease-in-out forwards;
+
     display: flex;
     justify-content: space-between;
     margin: 2%;
